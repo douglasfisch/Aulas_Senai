@@ -5,3 +5,5 @@ Criado para verificar alterações.
 readme de exemplo branch
 
 lembrei do comando: git commit
+Lembrei do comando: git status
+
