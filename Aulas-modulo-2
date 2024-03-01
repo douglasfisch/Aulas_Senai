@@ -1,0 +1,197 @@
+// criando uma classe
+public class Livro
+{
+public int Id {get;set;}
+public string Titulo {get;set;}
+public double Preco {get;set;}
+}
+
+
+static void Main(string[] args){
+// criando uma instância da classe 
+Livros
+Livro livro = new Livro();
+livro Preco = 10;
+Console.WriteLine(livro.Preco);
+}
+
+class Livro
+{
+public int Id {get;set;}
+public string Titulo {get;set;}
+public double Preco {get;set;}
+public Autor Autor{get;set;}
+}
+class Autor
+{
+public string Nome {get; set;}
+public string Email {get; set;}
+}
+
+static void Main(string[] args){
+    //cria instância do autor
+    Autor autor = new Autor();
+    autor.Nome = "Jorge Amado";
+    // cria uma instância do livro
+    Livro livro = new Livro();
+    livro.Autor = autor;
+    console.WriteLine(livro.Autor.Nome);
+    }
+
+    public class Livro
+{
+public int Id {get;set;}
+public string Titulo {get;set;}
+public double Preco {get;set;}
+public List<Autor> Autores {get;set;}
+}
+
+
+class Autor
+{
+public string Nome {get;set;}
+public string Email {get; set;}
+}
+
+
+static void Main(string[] args)
+{
+List<Autor> autores = new List<Autor>();
+Autores.Add(new Autor { Nome = "Jorge Amado"});
+Autores.Add(new Autor { Nome = "Agatha Christie"});
+
+Livro livro = new Livro();
+Livro.Autores = autores;
+
+livro.Autores.ForEach(c => 
+Console.WriteLine(c.Nome)); 
+}
+
+public class ContaCorrente
+{
+public double Saldo { get; set; }
+}
+
+public class ContaPoupanca
+{
+public double Saldo { get; set; }
+}
+
+// classe Conta.cs
+namespace OPP
+{
+public abstract Conta
+{
+public double Saldo { get; set; }
+}
+}
+
+
+// Conta.cs
+namespace OPP
+{
+public abstract class Conta
+{
+public double Saldo {get; set;}
+}
+}
+
+// ContaCorrente.cs
+namespace OOP
+{
+public class ContaCorrente : Conta
+{
+}
+}
+
+
+// Program.cs
+static void Main(string[] args)
+{
+ContaCorrente c = new ContaCorrente();
+Console.WriteLine(c.saldo);
+}
+
+
+class Compra
+{
+public virtual void CalculaDesconto(){}
+}
+class CompraDebito : Compra
+{
+public override void CalcularDesconto() 
+{
+// cálculo do desconto no débito
+}
+}
+class CompraCredito : Compra
+{
+public override void CalcularDesconto()
+{
+// cálculo do desconto no crédito
+}
+}
+
+
+class CompraCreditos : Compra
+{
+public virtual void CalcularJuros()
+{
+// cálculo dos juros no crédito para compras à vista
+}
+public virtual void CalcularJuros (int parcelas)
+{ // cálculo do juros no crédito conforme o número de parcelas
+}
+}
+
+
+public class Conta
+{
+public double saldo { get; private set; }
+public void Depositar(double valorDepositado)
+{
+this.saldo += valorDepositado;
+}
+public void Sacar(double valorSolicitado)
+{
+this.saldo -= valorSolicitado;
+}
+}
+
+
+
+namespace projeto
+{
+1 reference
+public abstract class Conta
+{
+0 references
+public string agencia {get;set}
+0 references
+public string conta {get;set}
+6 references
+public double saldo {get;set}
+1 reference
+public abstract void Sacar(double valor)
+}
+}
+
+
+// Corrente.cs – classe filha
+namespace projeto
+{
+2 references
+public class Corrente : Conta
+{
+0 references
+double limite {get;set}
+1 reference
+public override void Sacar(double valor)
+{
+base.saldo = base.saldo - valor;
+}
+}
+}
+
+
+
